@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
@@ -19,7 +19,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ToolBX.AutoInject" Version="2.0.2" />
+		<PackageReference Include="ToolBX.AutoInject" Version="2.1.0" />
 		<PackageReference Include="ToolBX.NetAbstractions" Version="2.0.3" />
 	</ItemGroup>
 
