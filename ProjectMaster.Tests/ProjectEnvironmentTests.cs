@@ -7,7 +7,7 @@ public static class Names
 }
 
 [TestClass]
-public class ProjectEnvironmentTester
+public class ProjectEnvironmentTests
 {
     [TestClass]
     public class AllUsers_UnsetOrganization : Tester<UnsetOrganizationDummyProjectEnvironment>
