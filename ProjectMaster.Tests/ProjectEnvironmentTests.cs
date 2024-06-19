@@ -10,13 +10,13 @@ public static class Names
 public class ProjectEnvironmentTests
 {
     [TestClass]
-    public class AllUsers_UnsetOrganization : Tester<UnsetOrganizationDummyProjectEnvironment>
+    public class AllUsers_UnsetOrganization : Tester<UnsetOrganizationGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_DoNotUseAny()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.CommonApplicationData)).Returns(baseDataPath);
 
             //Act
@@ -28,7 +28,7 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class AllUsers_UnsetProject : Tester<UnsetProjectDummyProjectEnvironment>
+    public class AllUsers_UnsetProject : Tester<UnsetProjectGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenProjectNameIsUnset_Throw()
@@ -44,13 +44,13 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class AllUsers : Tester<DummyProjectEnvironment>
+    public class AllUsers : Tester<GarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenNamesAreSet_Return()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.CommonApplicationData)).Returns(baseDataPath);
 
             //Act
@@ -62,13 +62,13 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class LocalUser_UnsetOrganization : Tester<UnsetOrganizationDummyProjectEnvironment>
+    public class LocalUser_UnsetOrganization : Tester<UnsetOrganizationGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)).Returns(baseDataPath);
 
             //Act
@@ -80,7 +80,7 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class LocalUser_UnsetProject : Tester<UnsetProjectDummyProjectEnvironment>
+    public class LocalUser_UnsetProject : Tester<UnsetProjectGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
@@ -96,13 +96,13 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class LocalUser : Tester<DummyProjectEnvironment>
+    public class LocalUser : Tester<GarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenNamesAreSet_Return()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)).Returns(baseDataPath);
 
             //Act
@@ -114,13 +114,13 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class RoamingUser_UnsetOrganization : Tester<UnsetOrganizationDummyProjectEnvironment>
+    public class RoamingUser_UnsetOrganization : Tester<UnsetOrganizationGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Returns(baseDataPath);
 
             //Act
@@ -132,7 +132,7 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class RoamingUser_UnsetProject : Tester<UnsetProjectDummyProjectEnvironment>
+    public class RoamingUser_UnsetProject : Tester<UnsetProjectGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
@@ -148,13 +148,13 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class RoamingUser : Tester<DummyProjectEnvironment>
+    public class RoamingUser : Tester<GarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenNamesAreSet_Return()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Returns(baseDataPath);
 
             //Act
@@ -166,7 +166,7 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class TemporaryFiles_UnsetOrganization : Tester<UnsetOrganizationDummyProjectEnvironment>
+    public class TemporaryFiles_UnsetOrganization : Tester<UnsetOrganizationGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
@@ -182,7 +182,7 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class TemporaryFiles_UnsetProject : Tester<UnsetProjectDummyProjectEnvironment>
+    public class TemporaryFiles_UnsetProject : Tester<UnsetProjectGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
@@ -198,7 +198,7 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class TemporaryFiles : Tester<DummyProjectEnvironment>
+    public class TemporaryFiles : Tester<GarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenNamesAreSet_Return()
@@ -214,13 +214,13 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class PersonalDocuments_UnsetOrganization : Tester<UnsetOrganizationDummyProjectEnvironment>
+    public class PersonalDocuments_UnsetOrganization : Tester<UnsetOrganizationGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.MyDocuments)).Returns(baseDataPath);
 
             //Act
@@ -232,7 +232,7 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class PersonalDocuments_UnsetProject : Tester<UnsetProjectDummyProjectEnvironment>
+    public class PersonalDocuments_UnsetProject : Tester<UnsetProjectGarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenOrganizationNameIsUnset_Throw()
@@ -248,13 +248,13 @@ public class ProjectEnvironmentTests
     }
 
     [TestClass]
-    public class PersonalDocuments : Tester<DummyProjectEnvironment>
+    public class PersonalDocuments : Tester<GarbageProjectEnvironment>
     {
         [TestMethod]
         public void WhenNamesAreSet_Return()
         {
             //Arrange
-            var baseDataPath = Fixture.Create<string>();
+            var baseDataPath = Dummy.Create<string>();
             GetMock<IEnvironment>().Setup(x => x.GetFolderPath(Environment.SpecialFolder.MyDocuments)).Returns(baseDataPath);
 
             //Act
