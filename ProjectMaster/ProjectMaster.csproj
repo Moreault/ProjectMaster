@@ -19,7 +19,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ToolBX.NetAbstractions" Version="2.2.0" />
+		<PackageReference Include="ToolBX.NetAbstractions" Version="3.0.0-beta1" />
 	</ItemGroup>
 
 	<ItemGroup>
